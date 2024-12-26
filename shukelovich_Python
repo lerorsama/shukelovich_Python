@@ -1,0 +1,25 @@
+def process_input():
+    input_number = int(input("Enter a number: "))
+    if input_number > 7:
+        print("Hello")
+
+    # --- Name Check ---
+    input_name = input("Enter a name: ")
+    if input_name == "John":
+        print("Hello, John")
+    else:
+        print("There is no such name")
+
+    try:
+        input_array_str = input("Enter numbers separated by spaces for the array: ")
+        number_array = [int(x) for x in input_array_str.split()]
+
+        print("Multiples of 3 in the array:")
+        for element in number_array:
+            if element % 3 == 0:
+                print(element)
+    except ValueError:
+        print("Invalid input for array. Please enter numbers separated by spaces.")
+
+process_input()
+input("Press Enter to close the program...")
